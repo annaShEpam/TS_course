@@ -5,7 +5,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-
+  experiments: {
+    topLevelAwait: true
+  },
   // basedir
   context: path.resolve(__dirname, 'src'),
 
@@ -58,5 +60,5 @@ module.exports = {
   ],
 
   // switch on source-map as a separate file: bundle.js.map
-  devtool: 'source-map'
+  devtool: 'source-map',
 };
